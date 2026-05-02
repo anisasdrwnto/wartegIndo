@@ -51,7 +51,7 @@ body {
 .navbar-nav > li#button-link > a:link,
 .navbar-nav > li#button-link > a:visited {
   background-color: #8B1A10;
-  color: #f2f2f2 !important;
+  color: #f2f2f2;
   border-radius: 4px !important;
   padding: 6px 16px !important;
   border: 1px solid rgba(0,0,0,.2) !important;
@@ -64,7 +64,7 @@ body {
 .navbar-nav > li#button-link > a:hover,
 .navbar-nav > li#button-link > a:focus {
   background-color: #6e1209;
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 /* toggle button hamburger */
