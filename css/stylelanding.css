@@ -35,24 +35,21 @@ body {
 }
 
 
-#button-link a:hover,
-#button-link a.nav-link:hover {
-  color: #ffffff !important;
-  background-color: #6e1209 !important;
-  border-radius: 4px;
-
-}
-
 /* fix ukuran button agar seimbang */
 #button-link {
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgba(0,0,0,.2);
-  border-radius: 4px;
-  background-color: #8B1A10;
-  line-height: 17px;
-  width: fit-content;        /* ← tambah ini */
-  white-space: nowrap;       /* ← biar teks ga wrap */
+  background-color: #8B1A10 !important;
+  color: #f2f2f2 !important;
+  border-radius: 4px !important;
+  padding: 6px 14px !important;
+  margin-left: 10px !important;
+  border: 1px solid rgba(0,0,0,.2) !important;
+  display: inline-block !important;
+  line-height: 20px !important;
+}
+
+#button-link:hover {
+  background-color: #6e1209 !important;
+  color: #ffffff !important;
 }
 
 #button-link a,
