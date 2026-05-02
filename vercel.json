@@ -5,6 +5,8 @@
         }
     },
     "rewrites":[
-        {"source": "/(.*)", "destination": "/$1"}
+        {"source": "/(.*)", "destination": "/$1"},
+        {"source": "/js/(.*)", "destination": "/js/$1" },
+        { "source": "/css/(.*)", "destination": "/css/$1" }
     ]
 }
