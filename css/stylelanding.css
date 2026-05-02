@@ -63,7 +63,7 @@ body {
 
 .navbar-nav > li#button-link > a:hover,
 .navbar-nav > li#button-link > a:focus {
-  background-color: #6e1209 !important;
+  background-color: #6e1209;
   color: #ffffff !important;
 }
 
