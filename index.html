@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wartegIndo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+    <link href="css/stylelanding.css" rel="stylesheet">
 </head>
 <body>
-    <p>Testt</p>
-    <p>Welcome</p>
+<nav id="scanfcode" class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" id="toogle-button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+       <span class="glyphicon glyphicon-menu-hamburger"></span>                     
+      </button>
+      <a id="logo" class="navbar-brand" href="#">Scanfcode</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+ 
+      <ul id="link" class="nav navbar-nav navbar-right">
+         <li class="dropdown" id="first-link">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">More <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Page 1-1</a></li>
+            <li><a href="#">Page 1-2</a></li>
+            <li><a href="#">Page 1-3</a></li>
+          </ul>
+        </li>
+        <li><a href='#'>Sign In</a></li>
+        <li id="button-link"><a href="#">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 </body>
 </html>
