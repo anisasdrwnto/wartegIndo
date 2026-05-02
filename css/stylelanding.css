@@ -20,8 +20,8 @@ body {
   letter-spacing: 2px;
 }
 
-/* navigation links */
-#link a {
+/* navigation links — EXCLUDE button-link */
+#link li:not(#button-link) a {
   color: #01325d;
   margin: 0 10px;
   letter-spacing: 1.5px;
@@ -34,35 +34,43 @@ body {
   margin-right: 6px;
 }
 
-/* toggle button hamburger */
-#toogle-button {
-  color: #f2f2f2;
-  border: 1px solid rgba(0,0,0,.2);
-  border-radius: 4px;
-  background-color: #8B1A10;
+/* reset li */
+.navbar-nav > li#button-link {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 13px 6px 0 6px !important;
+  display: inline-block !important;
+  float: none !important;
+  vertical-align: middle !important;
+  line-height: normal !important;
 }
 
-/* ====== BUTTON DAFTAR AKUN ====== */
-/* <a> langsung, bukan di dalam <li> */
-#button-link {
-  background-color: #8B1A10 !important;
+/* styling HANYA di <a> button */
+.navbar-nav > li#button-link > a,
+.navbar-nav > li#button-link > a:link,
+.navbar-nav > li#button-link > a:visited {
+  background-color: #8B1A10;
   color: #f2f2f2 !important;
   border-radius: 4px !important;
   padding: 6px 16px !important;
   border: 1px solid rgba(0,0,0,.2) !important;
   display: inline-block !important;
   line-height: normal !important;
-  margin: 13px 0 0 10px !important;
-  float: right !important;
+  margin: 0 !important;
   letter-spacing: 1px !important;
-  text-decoration: none !important;
-  font-size: 14px !important;
 }
 
-#button-link:hover,
-#button-link:focus,
-#button-link:active {
+.navbar-nav > li#button-link > a:hover,
+.navbar-nav > li#button-link > a:focus {
   background-color: #6e1209 !important;
   color: #ffffff !important;
-  text-decoration: none !important;
+}
+
+/* toggle button hamburger */
+#toogle-button {
+  color: #f2f2f2;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 4px;
+  background-color: #8B1A10;
 }
