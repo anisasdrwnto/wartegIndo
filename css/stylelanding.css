@@ -29,8 +29,8 @@ body
 /* navigation link with right border */
 #first-link
 {
-  padding-right:6px;
-  border-right:solid 1px #ccc;
+  padding-right:2px;
+  border-right:solid 1px gray;
 }
 /* sign up link button and toggle button */
 #button-link ,#toogle-button
