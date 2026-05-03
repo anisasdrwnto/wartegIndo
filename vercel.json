@@ -6,6 +6,7 @@
     },
     "rewrites":[
         {"source": "/(.*)", "destination": "/$1"},
+        {"source": "/api/:file.php", "destination": "/api/:file.php"},
         {"source": "/js/(.*)", "destination": "/js/$1" },
         { "source": "/css/(.*)", "destination": "/css/$1" }
     ]
