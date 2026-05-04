@@ -1,8 +1,8 @@
 <?php 
 
 $host     = 'gateway01.ap-southeast-1.prod.alicloud.tidbcloud.com'
-$username = '28bs2jCJxPBCHff.root'
-$password = 'xGUugfYqG11ci1bk'
+$username = '436bhdGNwvGxVJh.root'
+$password = 'mNh8CuuCJkcxcWJ4'
 $database = 'warteg-indo'
 $port     = 4000;
 
