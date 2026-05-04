@@ -1,14 +1,22 @@
 <?php
 header('Content-Type: application/json');
 
-// Baca POST dulu sebelum include apapun
-$nama     = $_POST['nama'] ?? '';
-$email    = $_POST['email'] ?? '';
-$password = $_POST['password'] ?? '';
-$role     = 'USR';
-$hash     = password_hash($password, PASSWORD_DEFAULT);
+// Baca POST biasa dulu, kalau kosong fallback ke raw input
+if(!empty($_POST)){
+    $nama     = $_POST['nama'] ?? '';
+    $email    = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
+} else {
+    $raw = file_get_contents('php://input');
+    parse_str($raw, $parsed);
+    $nama     = $parsed['nama'] ?? '';
+    $email    = $parsed['email'] ?? '';
+    $password = $parsed['password'] ?? '';
+}
 
-// Baru include koneksi
+$role = 'USR';
+$hash = password_hash($password, PASSWORD_DEFAULT);
+
 include $_SERVER['DOCUMENT_ROOT'] . '/api/koneksi.php';
 
 try{
