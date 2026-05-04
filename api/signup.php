@@ -6,6 +6,33 @@
     <title>Sign Up</title>
 </head>
 <body>
-    <p>Ini sign up</p>
+     <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="col-md-6 col-lg-4">
+            <form class="p-4 border rounded bg-light">
+                <h3 class="text-center mb-4">Sign Up</h3>
+            <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="idNama">
+            </div>  
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="idEmail" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="idPassword">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="idCheck">
+                <label class="form-check-label" for="checking">Remember Me</label>
+            </div>
+            <button type="button" class="btn btn-primary" id="btnSignUp">Submit</button>
+            </form>
+            <p class="mb-0 mt-3 text-center">
+                <a href="login.php" class="text-center">Already have an account? Login here</a>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
