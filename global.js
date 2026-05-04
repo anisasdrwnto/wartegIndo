@@ -35,6 +35,7 @@ var ajax = {
             type: "POST",
             url: base_url + url,
             data: data,
+            dataType: "json",
             success: function (result) {
                 next(result);
             },
