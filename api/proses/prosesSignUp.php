@@ -1,25 +1,12 @@
 <?php 
 
-include $_SERVER['DOCUMENT_ROOT'] . '/api/koneksi.php';
+include __DIR__ . '/../koneksi.php';
 
 $nama     = $_POST['nama'] ?? '';
 $email    = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
 $role     = 'USR';
 $hash     = password_hash($password, PASSWORD_DEFAULT);
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-$debug = [
-    'POST' => $_POST,
-    'nama' => $_POST['nama'] ?? 'KOSONG',
-    'email' => $_POST['email'] ?? 'KOSONG',
-    'password' => isset($_POST['password']) ? 'ADA' : 'KOSONG'
-];
-
-echo json_encode(['status' => false, 'debug' => $debug]);
-exit;
 
 try{
     $statement = $connection->prepare("SELECT id_users FROM users WHERE email = ?");
@@ -30,30 +17,21 @@ try{
         exit;
     }
 
-
-    //Generate ID User Otomatis
     $statement = $connection->prepare("SELECT id_users FROM users WHERE id_users LIKE 'USR%' ORDER BY id_users DESC LIMIT 1");
     $statement->execute();
     $last = $statement->fetchColumn();
 
-    if($last){
-        $number = (int) substr($last, 2) + 1;
-    }else{
-        $number = 1;
-    }
-
+    $number   = $last ? (int) substr($last, 2) + 1 : 1;
     $id_users = 'USR' . str_pad($number, 3, '0', STR_PAD_LEFT);
 
-    #INSERT USER BARU
     $statement = $connection->prepare("INSERT INTO users (id_users, nama, email, password, role) VALUES(?,?,?,?,?)");
     if ($statement->execute([$id_users, $nama, $email, $hash, $role])){
         echo json_encode(['status' => true, 'message' => 'sukses']);
     }else{
         echo json_encode(['status' => false, 'message' => 'gagal']);
     }
-}catch(PDOException$error){
-    http_response_code(500);
-    echo 'DB Error : ' . $error->getMessage();
-}
 
-?>
+}catch(PDOException $error){
+    http_response_code(500);
+    echo json_encode(['status' => false, 'message' => $error->getMessage()]);
+}
