@@ -8,6 +8,19 @@ $password = $_POST['password'] ?? '';
 $role     = 'USR';
 $hash     = password_hash($password, PASSWORD_DEFAULT);
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$debug = [
+    'POST' => $_POST,
+    'nama' => $_POST['nama'] ?? 'KOSONG',
+    'email' => $_POST['email'] ?? 'KOSONG',
+    'password' => isset($_POST['password']) ? 'ADA' : 'KOSONG'
+];
+
+echo json_encode(['status' => false, 'debug' => $debug]);
+exit;
+
 try{
     $statement = $connection->prepare("SELECT id_users FROM users WHERE email = ?");
     $statement->execute([$email]);
