@@ -14,7 +14,7 @@ $(document).ready(function(){
 
         ajax.ajaxPost(url, data, function(result){
             if(result.status === false){
-                alert(result.message());
+                alert(result.message);
             }else{
                 window.location.href="/login";
             }
