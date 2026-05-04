@@ -13,7 +13,7 @@ try{
     $statement->execute([$email]);
 
     if($statement->rowCount() > 0){
-        echo 'email sudah digunakan';
+        echo json_encode(['status'=> false, 'message'=> 'Email sudah digunakan']);
         exit;
     }
 
@@ -34,9 +34,9 @@ try{
     #INSERT USER BARU
     $statement = $connection->prepare("INSERT INTO users (id_users, nama, email, password, role) VALUES(?,?,?,?,?)");
     if ($statement->execute([$id_users, $nama, $email, $hash, $role])){
-        echo 'sukses';
+        echo json_encode(['status' => true, 'message' => 'sukses']);
     }else{
-        echo 'gagal';
+        echo json_encode(['status' => false, 'message' => 'gagal']);
     }
 }catch(PDOException$error){
     http_response_code(500);

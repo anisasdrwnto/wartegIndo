@@ -7,9 +7,10 @@
     "rewrites":[
         {"source": "/login", "destination": "/api/login.php" },
         {"source": "/signup", "destination": "/api/signup.php" },
+        {"source": "/home", "destination": "/api/home.php"},
 
         {"source": "/api/proses/:file.php", "destination": "/api/proses/:file.php"},
-        { "source": "/proses/(.*)", "destination": "/api/proses/$1"},
+        {"source": "/proses/(.*)", "destination": "/api/proses/$1"},
         {"source": "/api/:file.php", "destination": "/api/:file.php"},
 
         {"source": "/css/(.*)", "destination": "/css/$1" },
