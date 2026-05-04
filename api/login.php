@@ -13,6 +13,7 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="col-md-6 col-lg-4">
             <form class="p-4 border rounded bg-light">
+                <h3 class="text-center mb-4">Login</h3>
             <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
                 <input type="email" class="form-control" id="idEmail" aria-describedby="emailHelp">
