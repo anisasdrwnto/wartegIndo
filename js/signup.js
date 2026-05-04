@@ -8,7 +8,7 @@ $(document).ready(function(){
             nama:nama,
             email: email,
             password: password
-        },
+        };
 
         var url = "/proses/prosesSignUp.php";
 
