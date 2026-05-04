@@ -10,9 +10,9 @@ try{
     $dsn = "mysql:host=$host; port=$port; dbname=$database; username=$username; password=$password";
     $connection = new PDO($dsn, $username, $password, [
         PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
-        PDO::MYSQL_ATTR_SSL_CA => '/etc/ssl/certs/ca-certificates.crt',
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_TIMEOUT => 8,
+        PDO::ATTR_ERRMODE                      => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE           => PDO::FETCH_ASSOC,
+        PDO::ATTR_TIMEOUT                      => 10,
     ]);
 
 }catch(PDOException $error){
