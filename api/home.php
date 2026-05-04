@@ -6,6 +6,6 @@
     <title>Homepage</title>
 </head>
 <body>
-    
+    <p>Ini Home page</p>
 </body>
 </html>
