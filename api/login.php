@@ -31,7 +31,7 @@
             <button type="button" class="btn btn-primary" id="btnLogin">Submit</button>
             </form>
             <p class="mb-0 mt-3 text-center">
-                <a href="register.php" class="text-center">Don't have an account? Register here</a>
+                <a href="signup.php" class="text-center">Don't have an account? Sign up here</a>
             </p>
         </div>
     </div>
