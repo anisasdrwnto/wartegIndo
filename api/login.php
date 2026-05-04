@@ -27,7 +27,7 @@
                 <input type="checkbox" class="form-check-input" id="idCheck">
                 <label class="form-check-label" for="checking">Remember Me</label>
             </div>
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" id="btnLogin">Submit</button>
             </form>
         </div>
     </div>
