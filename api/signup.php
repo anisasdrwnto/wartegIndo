@@ -18,15 +18,15 @@
                     <h3 class="text-center mb-4">Sign Up</h3>
                 <div class="mb-3">
                     <label for="nama" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="idNama">
+                    <input type="text" class="form-control" id="idNama" name="nama">
                 </div>  
                 <div class="mb-3">
                     <label for="email" class="form-label">Email Address</label>
-                    <input type="email" class="form-control" id="idEmail">
+                    <input type="email" class="form-control" id="idEmail" name="email">
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="idPassword">
+                    <input type="password" class="form-control" id="idPassword" name="password">
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="idCheck">
