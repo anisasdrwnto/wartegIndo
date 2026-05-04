@@ -1,6 +1,6 @@
 <?php 
 
-include __DIR__ . '/../koneksi.php';
+include $_SERVER['DOCUMENT_ROOT'] . '/api/koneksi.php';
 
 $nama     = $_POST['nama'] ?? '';
 $email    = $_POST['email'] ?? '';
