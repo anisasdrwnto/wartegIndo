@@ -35,7 +35,7 @@
             <button type="button" class="btn btn-primary" id="btnSignUp">Submit</button>
             </form>
             <p class="mb-0 mt-3 text-center">
-                <a href="login.php" class="text-center">Already have an account? Login here</a>
+                <a href="/login" class="text-center">Already have an account? Login here</a>
             </p>
         </div>
     </div>
