@@ -1,12 +1,15 @@
-<?php 
+<?php
+header('Content-Type: application/json');
 
-include $_SERVER['DOCUMENT_ROOT'] . '/api/koneksi.php';
-
+// Baca POST dulu sebelum include apapun
 $nama     = $_POST['nama'] ?? '';
 $email    = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
 $role     = 'USR';
 $hash     = password_hash($password, PASSWORD_DEFAULT);
+
+// Baru include koneksi
+include $_SERVER['DOCUMENT_ROOT'] . '/api/koneksi.php';
 
 try{
     $statement = $connection->prepare("SELECT id_users FROM users WHERE email = ?");
